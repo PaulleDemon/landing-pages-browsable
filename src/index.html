@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page templates</title>
+    <meta name="description" content="Build beautiful landing pages fast and efficiently using landing page templates">
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Landing page templates" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://github.com/PaulleDemon" /> <!--Replace with the current website url-->
+    <meta property="og:image" content="" />
+  
+
+    <link rel="stylesheet" href="css/tailwind-runtime.css">
+    <!-- <link rel="stylesheet" href="./css/tailwind-build.css"> -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body class="tw-min-h-[100vh] tw-bg-[#fff] tw-flex tw-flex-col">
+    
+
+    <header class="tw-flex tw-w-full tw-z-20
+                    tw-h-[60px]  
+                    lg:tw-justify-around
+                    tw-absolute tw-top-0 tw-px-[5%]
+                    max-lg:tw-px-4
+                    max-lg:tw-mr-auto
+                    tw-bg-opacity-0
+                    ">
+        <a class="tw-w-[50px] tw-h-[50px] tw-p-[4px]" href="">
+            <img src="./assets/logo.png" 
+                  alt="logo" class="tw-w-full tw-h-full tw-object">
+        </a>
+        <div class="collapsible-header animated-collapse  max-lg:tw-shadow-md"
+                    id="collapsed-header-items"
+                    >
+            <div class=" tw-w-max
+                            tw-flex tw-gap-5 tw-h-full lg:tw-mx-auto
+                            lg:tw-place-items-center 
+                            max-lg:tw-place-items-end
+                            tw-text-base max-lg:tw-flex-col
+                            max-lg:tw-mt-[30px]
+                            max-lg:tw-gap-5
+                            tw-text-black
+                        ">
+                    
+                <a class="header-links" href="#">
+                    About
+                </a>
+                <a class="header-links" href="#faq">
+                    Faq
+                </a>
+                <a class="header-links" href="https://github.com/PaulleDemon">
+                    Github
+                </a>
+                <a class="header-links" href="https://github.com/PaulleDemon/landing-pages/issues/new/choose">
+                    Template request
+                </a>
+            </div>
+            <div class="tw-flex tw-gap-[20px] tw-place-items-center tw-text-base
+                         max-md:tw-place-content-end
+                         max-md:tw-w-full
+                         tw-mx-4
+                         ">
+
+                <a href="https://github.com/PaulleDemon/landing-pages"
+                    aria-label="github"
+                    class="tw-text-xl
+                            tw-rounded-md
+                            header-link
+                            tw-transition-transform
+                            tw-duration-[0.3s]
+                        "   
+                        >
+                    <!-- <span>Github</span> -->
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="https://buymeacoffee.com/artpaul"
+                    aria-label="sponsor"
+                    class="tw-text-xl
+                            tw-rounded-md
+                            tw-w-[40px] tw-h-[40px]
+                        "   
+                        >
+                    <!-- <span>Github</span> -->
+                    <img src="./assets/images/brand-logos/bmc.svg" class="tw-w-[40px] tw-h-[40px]">
+                </a>
+            </div>
+        </div>
+        <button class="tw-absolute tw-text-black tw-z-50 
+                        tw-right-3
+                        tw-top-3
+                        tw-text-3xl  bi bi-list lg:tw-hidden"  
+                onclick="toggleHeader()" aria-label="menu" id="collapse-btn">
+        </button>
+    </header>
+
+    <section class="tw-w-full tw-min-h-[60vh] tw-max-w-[100vw]
+                        max-md:tw-mt-[50px]
+                        max-lg:tw-p-4 
+                        tw-flex tw-flex-col tw-overflow-hidden tw-relative"
+                        >
+            
+        <div class="tw-w-full tw-h-full tw-p-[5%]
+                    lg:tw-place-content-center
+                    tw-gap-6 
+                    tw-flex max-lg:tw-flex-col">
+
+            <div class="tw-flex tw-flex-col tw-place-items-center tw-mt-8">
+                <h1 class="tw-text-6xl max-lg:tw-text-4xl tw-font-semibold 
+                            tw-leading-[80px] tw-text-center
+                            max-md:tw-leading-snug tw-uppercase" 
+                            >
+                    <span>
+                        Ship faster with 
+                    </span>
+                    <br>
+                    <span class="tw-text-primary">
+                        landing page templates
+                    </span>
+                </h1>  
+                <div class="tw-mt-5 tw-max-w-[550px] tw-text-justify tw-text-lg tw-text-gray-600 tw-p-2 max-lg:tw-max-w-full">
+                    Bringing you a list of website templates to supercharge your development.
+                    <b>#CodeLessDeliverMore</b>
+                </div>
+                
+                <div class="tw-mt-4 tw-flex 
+                            tw-overflow-hidden tw-gap-4 
+                            tw-p-2 tw-w-full tw-place-content-center
+                            tw-place-items-center ">
+                    
+                    <input type="text" name="" 
+                            class="input !tw-outline-none 
+                                    !tw-min-w-[60%]
+                                    !tw-border-transparent
+                                    tw-shadow-[0_0px_10px_rgba(0,0,0,0.25)]
+                                    active:!tw-border-primary
+                                    focus:!tw-border-primary
+                                    " 
+                            placeholder="search eg: app"
+                            id="search-input">
+
+                    <button class="btn  
+                                tw-duration-[0.3s]
+                                hover:tw-scale-x-[1.03]
+                                tw-transition-transform
+                                !tw-shadow-xl
+                                "
+                              
+                                >
+                        <i class="bi bi-search"></i>
+                    </button>  
+                  
+                </div>
+
+            </div>
+            
+        </div>
+    
+    </section>
+
+    <section class="tw-w-full  tw-max-w-[100vw]
+                    tw-flex tw-flex-col tw-overflow-hidden tw-relative 
+                    tw-place-items-center
+                    tw-place-content-center
+                    tw-p-6
+                    "
+                    id="template-data"
+                    >
+
+        <div class="tw-flex tw-flex-wrap tw-gap-4">
+
+            <div class="template-card">
+
+                <button type="button" class="template-preview">
+                    <img src="./assets/images/template-preview/chat-origin.png" 
+                        alt="" class="tw-w-full tw-h-full tw-object-contain" 
+                        srcset="">
+                </button>
+                <div class="template-footer">
+                    <h2 class="tw-text-xl tw-font-medium">Chat Origin - App template</h2>
+
+                    <div class="tw-flex tw-mt-5 tw-justify-between">
+                        <a href="http://" class="tw-text-2xl">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="http://" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] 
+                                                    tw-w-[30px] tw-h-[30px] tw-place-content-center
+                                                    tw-text-lg 
+                                                    ">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </section>
+  
+    <!-- the preview modal -->
+    <div class="tw-fixed tw-top-[50%] tw-translate-y-[-50%] tw-left-[50%] tw-translate-x-[-50%]
+            tw-w-full tw-max-w-[800px] tw-h-[650px] tw-border tw-bg-white 
+            tw-rounded-lg tw-shadow-md tw-p-3">
+
+        <div class="tw-relative tw-w-full">
+            <button title="close" type="button" class="tw-absolute tw-right-5 tw-top-3 tw-text-2xl tw-shadow-md">
+                <i class="bi bi-x-circle-fill"></i>
+            </button>
+        </div>
+
+        <div class="tw-w-full tw-h-[400px] tw-bg-[#b3b3b38b] tw-p-2 tw-rounded-lg">
+            <img src="./assets/images/template-preview/chat-origin.png" 
+                class="tw-w-full tw-h-full tw-object-contain" srcset="">
+        </div>
+
+        <div class="tw-flex tw-flex-col tw-gap-3 tw-p-4">
+            <h3 class="tw-text-2xl tw-font-medium">Chat app</h3>
+            <div class="tw-flex tw-w-full tw-place-items-center">
+
+                <a href="http://" id="modal-source-code">
+                    <i class="bi bi-github tw-text-2xl"></i>
+                </a>
+
+                <a href="http://" class="tw-ml-auto tw-p-2 tw-px-4 tw-border-[1px] tw-rounded-full 
+                                        tw-border-black hover:tw-bg-black hover:!tw-text-white 
+                                        tw-duration-[0.3s] w-transition-colors ">
+                    <span>
+                        Live preview
+                        <i class="bi bi-arrow-up-right"></i>
+                    </span>
+                </a>
+
+            </div>
+            <button class="btn tw-ml-auto" onclick="" id="download-folder">
+                <span>
+                    Download
+                    <i class="bi bi-download"></i>
+                </span>
+            </button>
+        
+        </div>
+    </div>
+
+
+    <section class="tw-mt-5 tw-w-full tw-flex tw-flex-col tw-p-[2%]
+                     tw-place-items-center" id="faq">
+
+        <h3 class="tw-text-3xl max-md:tw-text-2xl tw-text-primary tw-font-medium">
+           Faq
+        </h3>
+        <div class="tw-flex tw-flex-col tw-w-full tw-min-h-[450px] tw-max-w-[850px] tw-gap-2  tw-mt-5">
+            <div class="tw-w-full">
+                <div class="collapsible tw-flex tw-select-none tw-w-full tw-text-2xl">
+                    <span>Under what license are the source code?</span>
+                    <i class="bi bi-plus tw-font-semibold tw-ml-auto"></i>
+                </div>
+                <div class="content" style="height: 0px;">
+                    All the templates are under MIT license
+                </div> 
+            </div>
+
+            <div class="tw-w-full">
+                <div class="collapsible tw-flex tw-select-none tw-w-full tw-text-2xl">
+                    <span>How can I request a new template?</span>
+                    <i class="bi bi-plus tw-font-semibold tw-ml-auto"></i>
+                </div>
+                <div class="content" style="height: 0px;">
+                    you can request a generic template from 
+                    <a href="https://github.com/PaulleDemon/landing-pages/issues/new/choose" 
+                            class="tw-underline">
+                            Github template request
+                    </a>
+                    .If you are looking for Custom design you should 
+                    <a href="https://tally.so/r/woO0Kx" class="tw-underline">contact  here</a>
+                </div> 
+            </div>
+
+            <div class="tw-w-full">
+                <div class="collapsible tw-flex tw-select-none tw-w-full tw-text-2xl">
+                    <span>Are all templates fancy?</span>
+                    <i class="bi bi-plus tw-font-semibold tw-ml-auto"></i>
+                </div>
+                <div class="content" style="height: 0px;">
+                    No, templates are made understanding the use-case and to maximize conversion,
+                    some maybe fancy, some are straight to point without too much animation. 
+                    Too much animations and elements makes it harder for people to understand the purpose
+                    of the website and reduces conversion. Minimal site >> fancy site. 
+                </div> 
+            </div>
+           
+        </div>
+    
+
+    </section>
+ 
+    <footer class="tw-flex max-md:tw-flex-col tw-w-full
+                    tw-px-[5%] tw-gap-3 
+                    tw-p-3
+                    tw-text-black
+                    tw-mt-auto
+                    ">
+
+        <div class="tw-h-full tw-w-[250px] tw-flex tw-gap-4">
+            <a href="http://github.com/PaulleDemon" class="tw-text-2xl">
+                <i class="bi bi-github"></i>
+            </a>
+            
+            <a href="https://dev.to/paul_freeman" target="_blank" rel="noreferrer" class="tw-text-2xl">
+                <img src="./assets/images/brand-logos/dev.svg" alt="dev.to" 
+                    class="tw-w-[30px] tw-h-[30px]">
+            </a>
+            <a href="http://x.com/pauls_freeman" target="_blank" rel="noreferrer" class="tw-text-2xl">
+                <i class="bi bi-twitter"></i>
+            </a>
+        </div>
+
+        <div class="tw-w-full tw-flex tw-place-content-end">
+            <span>Made with ❤️ by 
+                <a href="http://github.com/PaulleDemon" class="tw-underline tw-underline-offset-2">Paul</a>
+
+            </span>
+        </div>
+
+    </footer>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js" integrity="sha512-B1lby8cGcAUU3GR+Fd809/ZxgHbfwJMp0jLTVfHiArTuUt++VqSlJpaJvhNtRf3NERaxDNmmxkdx2o+aHd4bvw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js" integrity="sha512-AY2+JxnBETJ0wcXnLPCcZJIJx0eimyhz3OJ55k2Jx4RtYC+XdIi2VtJQ+tP3BaTst4otlGG1TtPJ9fKrAUnRdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" integrity="sha512-XMVd28F1oH/O71fzwBnV7HucLxVwtxf26XV8P4wPk26EDxuGZ91N8bsOttmnomcCD3CS5ZMRL50H0GgOHvegtg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="./index.js"></script>
+<script src="./scripts/download-folder.js"></script>
+
+</html>
