@@ -120,7 +120,6 @@ function getObjectsByTagNameOrName(searchValue) {
     })
 }
 
-setTimeout(() => console.log("Object: ", getObjectsByTagNameOrName("app")), 1000)
 
 const modal = document.querySelector("#preview-modal")
 
@@ -162,7 +161,6 @@ const templateDataContainer = document.querySelector("#template-data-container")
  * Adds templates to the page
  */
 function loadTemplates(data){
-    console.log("data: ", data)
 
     templateDataContainer.innerHTML = ""
 

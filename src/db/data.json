@@ -3,8 +3,8 @@
         "id": 1,
         "name": "Chat origin",
         "previewUrl": "https://chatorigin.netlify.app/",
-        "previewImg": "https://github.com/PaulleDemon/landing-pages/blob/main/src/apps/screenshots/chat-origin.png", 
         "githubUrl": "https://github.com/PaulleDemon/landing-pages/tree/main/src/apps/chatorigin",
+        "previewImg": "https://github.com/PaulleDemon/landing-pages/raw/main/src/apps/screenshots/chat-origin.png", 
         "tags": ["apps", "landing pages", "chat", "apple", "google"]
     },
     {
@@ -12,7 +12,7 @@
         "name": "Finance SaaS",
         "previewUrl": "https://finance-saas-template.netlify.app/",
         "githubUrl": "https://github.com/PaulleDemon/landing-pages/tree/main/src/saas/finance",
-        "previewImg": "https://github.com/PaulleDemon/landing-pages/blob/main/src/saas/screenshots/finance.png", 
+        "previewImg": "https://github.com/PaulleDemon/landing-pages/raw/main/src/saas/screenshots/finance.png", 
         "tags": ["saas", "finance"]
     },
     {
