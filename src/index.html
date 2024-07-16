@@ -25,6 +25,17 @@
 </head>
 <body class="tw-min-h-[100vh] tw-bg-[#fff] tw-flex tw-flex-col">
     
+    <div class="tw-fixed tw-top-5 tw-left-[50%] tw-translate-x-[-50%] tw-z-40 tw-rounded-md
+                tw-max-w-[350px] tw-h-fit tw-p-2 tw-px-4 tw-bg-blue-500 tw-text-white
+                tw-flex tw-place-items-center tw-gap-2 tw-hidden
+                "
+                id="toast-alert"
+                >
+        <span id="alert-message"></span>
+        <button title="close" class="tw-h-full tw-w-[30px] tw-text-xl"  onclick="hideAlert()">
+            <i class="bi bi-x"></i>
+        </button>
+    </div>
 
     <header class="tw-flex tw-w-full tw-z-20
                     tw-h-[60px]  
@@ -170,28 +181,31 @@
                     tw-flex tw-flex-col tw-overflow-hidden tw-relative 
                     tw-place-items-center
                     tw-place-content-center
+                    tw-min-h-[60vh]
                     tw-p-6
                     "
                     id="template-data"
                     >
 
-        <div class="tw-flex tw-flex-wrap tw-gap-4">
+        <div class="tw-flex tw-flex-wrap tw-gap-8 tw-w-full tw-h-full 
+                    tw-place-content-center">
 
-            <div class="template-card">
+            <div class="template-card" onclick="showPreviewModal(1)">
 
-                <button type="button" class="template-preview">
-                    <img src="./assets/images/template-preview/chat-origin.png" 
+                <div  class="template-preview">
+                    <img src="./assets/template-preview/apps/chat-origin.png" 
                         alt="" class="tw-w-full tw-h-full tw-object-contain" 
                         srcset="">
-                </button>
-                <div class="template-footer">
+                </div>
+                <div class="template-footer tw-w-full" >
                     <h2 class="tw-text-xl tw-font-medium">Chat Origin - App template</h2>
 
                     <div class="tw-flex tw-mt-5 tw-justify-between">
-                        <a href="http://" class="tw-text-2xl">
+                        <a href="https://github.com/PaulleDemon/landing-pages/tree/main/src/apps/chatorigin" target="_blank" rel="noopener noreferrer" class="tw-text-2xl">
                             <i class="bi bi-github"></i>
                         </a>
-                        <a href="http://" class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] 
+                        <a href="https://chatorigin.netlify.app/" target="_blank" rel="noopener noreferrer" 
+                                            class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] 
                                                     tw-w-[30px] tw-h-[30px] tw-place-content-center
                                                     tw-text-lg 
                                                     ">
@@ -201,35 +215,65 @@
                 </div>
             </div>
 
+            <div class="template-card">
+
+                <button type="button" class="template-preview" onclick="showPreviewModal(2)">
+                    <img src="./assets/template-preview/saas/celestialsaas.png" 
+                        alt="" class="tw-w-full tw-h-full tw-object-contain" 
+                        srcset="">
+                </button>
+                <div class="template-footer">
+                    <h2 class="tw-text-xl tw-font-medium">Chat Origin - App </h2>
+
+                    <div class="tw-flex tw-mt-5 tw-justify-between">
+                        <a href="https://github.com/PaulleDemon/landing-pages/tree/main/src/apps/chatorigin" target="_blank" rel="noopener noreferrer" class="tw-text-2xl">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://chatorigin.netlify.app/" target="_blank" rel="noopener noreferrer" 
+                                            class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] 
+                                                    tw-w-[30px] tw-h-[30px] tw-place-content-center
+                                                    tw-text-lg 
+                                                    ">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            
+
         </div>
         
     </section>
   
     <!-- the preview modal -->
     <div class="tw-fixed tw-top-[50%] tw-translate-y-[-50%] tw-left-[50%] tw-translate-x-[-50%]
-            tw-w-full tw-max-w-[800px] tw-h-[650px] tw-border tw-bg-white 
-            tw-rounded-lg tw-shadow-md tw-p-3">
+            tw-w-full tw-max-w-[800px] tw-h-[600px] tw-border tw-bg-white tw-transition-transform
+            tw-duration-[0.3s] tw-rounded-lg tw-shadow-md tw-p-3 tw-scale-0" id="preview-modal">
 
         <div class="tw-relative tw-w-full">
-            <button title="close" type="button" class="tw-absolute tw-right-5 tw-top-3 tw-text-2xl tw-shadow-md">
+            <button id="close-modal" title="close" type="button" 
+                    onclick="hidePreviewModal()"
+                    class="tw-bg-white tw-w-[30px] tw-h-[30px] tw-absolute tw-right-5 tw-top-3 tw-rounded-full tw-text-2xl tw-shadow-md">
                 <i class="bi bi-x-circle-fill"></i>
             </button>
         </div>
 
         <div class="tw-w-full tw-h-[400px] tw-bg-[#b3b3b38b] tw-p-2 tw-rounded-lg">
-            <img src="./assets/images/template-preview/chat-origin.png" 
-                class="tw-w-full tw-h-full tw-object-contain" srcset="">
+            <img src="" 
+                class="tw-w-full tw-h-full tw-object-contain" id="preview-img">
         </div>
 
         <div class="tw-flex tw-flex-col tw-gap-3 tw-p-4">
-            <h3 class="tw-text-2xl tw-font-medium">Chat app</h3>
+            <h3 class="tw-text-2xl tw-font-medium" id="template-name">Chat app</h3>
             <div class="tw-flex tw-w-full tw-place-items-center">
 
-                <a href="http://" id="modal-source-code">
+                <a href="" id="modal-source-code" target="_blank" rel="noreferrer noopener">
                     <i class="bi bi-github tw-text-2xl"></i>
                 </a>
 
-                <a href="http://" class="tw-ml-auto tw-p-2 tw-px-4 tw-border-[1px] tw-rounded-full 
+                <a href="" id="preview-url" target="_blank" rel="noreferrer noopener"
+                        class="tw-ml-auto tw-p-2 tw-px-4 tw-border-[1px] tw-rounded-full 
                                         tw-border-black hover:tw-bg-black hover:!tw-text-white 
                                         tw-duration-[0.3s] w-transition-colors ">
                     <span>
@@ -239,7 +283,7 @@
                 </a>
 
             </div>
-            <button class="btn tw-ml-auto" onclick="" id="download-folder">
+            <button class="btn tw-ml-auto" id="download-folder">
                 <span>
                     Download
                     <i class="bi bi-download"></i>
@@ -339,7 +383,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" integrity="sha512-XMVd28F1oH/O71fzwBnV7HucLxVwtxf26XV8P4wPk26EDxuGZ91N8bsOttmnomcCD3CS5ZMRL50H0GgOHvegtg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script src="./index.js"></script>
 <script src="./scripts/download-folder.js"></script>
+<script src="./index.js"></script>
 
 </html>

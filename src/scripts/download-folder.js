@@ -1,6 +1,6 @@
 const downloadFolder = async (repoUrl) => {
-    console.log(repoUrl);
-    const url = new URL(repoUrl);
+
+    const url = new URL(repoUrl)
     const pathname = url.pathname
     const pathParts = pathname.split('/')
     repo = pathParts[2]

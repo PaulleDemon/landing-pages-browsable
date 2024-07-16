@@ -7,7 +7,30 @@ let isHeaderCollapsed = window.innerWidth < RESPONSIVE_WIDTH
 const collapseBtn = document.getElementById("collapse-btn")
 const collapseHeaderItems = document.getElementById("collapsed-header-items")
 
+const toastAlert = document.querySelector("#toast-alert")
+let toastAlertTimeout = null
 
+let dbCache = []
+
+/**
+ * Fetches the json db
+ * @returns JS object
+ */
+async function fetchDB(){
+
+    try{
+        const response = await fetch(`/src/db/data.json`)
+
+        return await response.json()
+    }catch(e){
+        toastAlert("Failed to fetch DB, please reload or try again later")
+        return 
+    }
+}
+
+fetchDB().then((data) => {
+    dbCache = data
+})
 
 function onHeaderClickOutside(e) {
 
@@ -71,38 +94,62 @@ collapsibleBtns.forEach(function (btn) {
 })
 
 
+function showAlert(message="", timeout=3000){
+    toastAlert.classList.remove("tw-hidden")
+
+    toastAlert.querySelector("#alert-message").textContent = message
+
+    clearTimeout(toastAlertTimeout)
+
+    toastAlertTimeout = setTimeout(hideAlert, timeout)
+}
+
+function hideAlert(){
+    toastAlert.classList.add("tw-hidden")
+    clearTimeout(toastAlertTimeout)
+}
+
+
+function getObjectsByTagNameOrName(searchValue) {
+    return dbCache.filter(item => {
+        const tagMatch = item.tags.some(tag => tag.startsWith(searchValue))
+        const nameMatch = item.name.startsWith(searchValue)
+        return tagMatch || nameMatch
+    })
+}
+
+setTimeout(() => console.log("Object: ", getObjectsByTagNameOrName("app")), 1000)
+
+const modal = document.querySelector("#preview-modal")
+
+function hidePreviewModal(){
+
+    modal.classList.remove("tw-scale-[1]")
+    modal.classList.add("tw-scale-0")
+
+}
 
 /**
- * Animations
+ * Gets value from DB by id
  */
-
-gsap.registerPlugin(ScrollTrigger)
-
-
-const numberTimeline = gsap.timeline({paused: true, scrollTrigger: {
-    trigger: "#numbers",
-    start: "100% 100%", // when the top of the trigger hits the top of the viewport
-    end: "100% 90%", // when bottom trigger hits bottom of the viewport
-    // markers: true,
+function getObjectById(id) {
+    return dbCache.find(item => item.id === id);
 }
-})
 
-numberTimeline.fromTo("#numbers-container", {
-    scale: 0.8,
-}, {
+function showPreviewModal(previewId){
 
-    scale: 1,
-    duration: 3
-}).to("#installs", {
-    innerText: 300,
-    duration: 3,
-    snap: {
-        innerText: 1
-    },
-}, "<").to("#hours", {
-    innerText: 500,
-    duration: 3,
-    snap: {
-        innerText: 1
+    const data = getObjectById(previewId)
+
+    modal.querySelector("#preview-img").setAttribute("src", data.previewImg)
+    modal.querySelector("#template-name").textContent = data.name
+    modal.querySelector("#modal-source-code").setAttribute("href", data.githubUrl)
+    modal.querySelector("#preview-url").setAttribute("href", data.previewUrl)
+    modal.querySelector("#download-folder").onclick = () => {
+        showAlert("downloading please wait...")
+        downloadFolder(data.githubUrl)
     }
-}, "<")
+
+    modal.classList.remove("tw-scale-0", "tw-hidden")
+    modal.classList.add("tw-scale-[1]")
+
+}

@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Chat origin",
+        "previewUrl": "https://chatorigin.netlify.app/",
+        "previewImg": "https://github.com/PaulleDemon/landing-pages/blob/main/src/apps/screenshots/chat-origin.png", 
+        "githubUrl": "https://github.com/PaulleDemon/landing-pages/tree/main/src/apps/chatorigin",
+        "tags": ["apps", "landing pages", "chat", "apple", "google"]
+    },
+    {
+        "id": 2,
+        "name": "Finance SaaS",
+        "githubUrl": "https://github.com/PaulleDemon/landing-pages/tree/main/src/saas/finance",
+        "previewUrl": "https://finance-saas-template.netlify.app/",
+        "previewImg": "https://github.com/PaulleDemon/landing-pages/blob/main/src/saas/screenshots/finance.png", 
+        "tags": ["saas", "finance"]
+    },
+    {
+        "id": 3,
+        "name": "Celestial SaaS",
+        "githubUrl": "https://github.com/PaulleDemon/landing-pages/tree/main/src/saas/finance",
+        "previewUrl": "https://finance-saas-template.netlify.app/",
+        "previewImg": "https://github.com/PaulleDemon/landing-pages/blob/main/src/saas/screenshots/finance.png", 
+        "tags": ["saas", "finance"]
+    }
+]
