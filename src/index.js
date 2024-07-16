@@ -19,11 +19,11 @@ let dbCache = []
 async function fetchDB(){
 
     try{
-        const response = await fetch(`/src/db/data.json`)
+        const response = await fetch(`./db/data.json`)
 
         return await response.json()
     }catch(e){
-        toastAlert("Failed to fetch DB, please reload or try again later")
+        showAlert("Failed to fetch DB, please reload or try again later")
         return 
     }
 }
