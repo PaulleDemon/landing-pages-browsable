@@ -30,6 +30,7 @@ async function fetchDB(){
 
 fetchDB().then((data) => {
     dbCache = data
+    loadTemplates(data)
 })
 
 function onHeaderClickOutside(e) {
@@ -111,9 +112,10 @@ function hideAlert(){
 
 
 function getObjectsByTagNameOrName(searchValue) {
+    searchValue = searchValue.toLowerCase()
     return dbCache.filter(item => {
-        const tagMatch = item.tags.some(tag => tag.startsWith(searchValue))
-        const nameMatch = item.name.startsWith(searchValue)
+        const tagMatch = item.tags.some(tag => tag.toLowerCase().startsWith(searchValue))
+        const nameMatch = item.name.toLowerCase().startsWith(searchValue)
         return tagMatch || nameMatch
     })
 }
@@ -152,4 +154,75 @@ function showPreviewModal(previewId){
     modal.classList.remove("tw-scale-0", "tw-hidden")
     modal.classList.add("tw-scale-[1]")
 
+}
+
+
+const templateDataContainer = document.querySelector("#template-data-container")
+/**
+ * Adds templates to the page
+ */
+function loadTemplates(data){
+    console.log("data: ", data)
+
+    templateDataContainer.innerHTML = ""
+
+    data.forEach((x) => {
+        let template = `
+                <div class="template-card" onclick="showPreviewModal(${x.id})">
+
+                    <div  class="template-preview">
+                        <img src="${x.previewImg}" 
+                            alt="" class="tw-w-full tw-h-full tw-object-contain" 
+                            >
+                    </div>
+                    <div class="template-footer tw-w-full" >
+                        <h2 class="tw-text-xl tw-font-medium">${x.name}</h2>
+
+                        <div class="tw-flex tw-mt-5 tw-justify-between">
+                            <a href="${x.githubUrl}" target="_blank" rel="noopener noreferrer" class="tw-text-2xl">
+                                <i class="bi bi-github"></i>
+                            </a>
+                            <a href="${x.previewUrl}" target="_blank" rel="noopener noreferrer" 
+                                                class="tw-rounded-full tw-flex tw-border-black tw-border-[1px] 
+                                                        tw-w-[30px] tw-h-[30px] tw-place-content-center
+                                                        tw-text-lg 
+                                                        ">
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            ` 
+
+        templateDataContainer.innerHTML += template
+
+    })
+
+}
+
+
+
+function onSearch(){
+
+    const search = document.querySelector("#search-input").value
+    const searchNotFound = document.querySelector("#search-404")
+    searchNotFound.classList.add("tw-hidden")
+
+    if (search.trim().length > 0){
+        let searchResults = getObjectsByTagNameOrName(search)
+        loadTemplates(searchResults)
+        
+        if (searchResults.length === 0){
+            searchNotFound.classList.remove("tw-hidden")
+        }
+
+    }else{
+        loadTemplates(dbCache)
+    }
+}
+
+function updateSearchTerm(searchTerm){
+    const search = document.querySelector("#search-input")
+    search.value = searchTerm
+    onSearch()
 }

@@ -113,7 +113,7 @@
         </button>
     </header>
 
-    <section class="tw-w-full tw-min-h-[60vh] tw-max-w-[100vw]
+    <section class="tw-w-full tw-min-h-[40vh] tw-max-w-[100vw]
                         max-md:tw-mt-[50px]
                         max-lg:tw-p-4 
                         tw-flex tw-flex-col tw-overflow-hidden tw-relative"
@@ -138,7 +138,7 @@
                     </span>
                 </h1>  
                 <div class="tw-mt-5 tw-max-w-[550px] tw-text-justify tw-text-lg tw-text-gray-600 tw-p-2 max-lg:tw-max-w-full">
-                    Bringing you a list of website templates to supercharge your development.
+                    Bringing you a list of free website templates to supercharge your development.
                     <b>#CodeLessDeliverMore</b>
                 </div>
                 
@@ -156,6 +156,8 @@
                                     focus:!tw-border-primary
                                     " 
                             placeholder="search eg: app"
+                            onchange="onSearch()"
+                            oninput="onSearch()"
                             id="search-input">
 
                     <button class="btn  
@@ -164,11 +166,56 @@
                                 tw-transition-transform
                                 !tw-shadow-xl
                                 "
-                              
+                                onclick="onSearch()"
                                 >
                         <i class="bi bi-search"></i>
                     </button>  
                   
+                </div>
+                <div class="tw-mt-4 tw-flex tw-whitespace-nowrap tw-gap-2 tw-max-w-[650px] lg:tw-flex-wrap max-md:tw-max-w-[100vw] 
+                            tw-overflow-x-auto tw-p-1">
+                    <button class="tw-text-base tw-rounded-full tw-p-[2px] tw-px-2 
+                                    tw-text-primary tw-bg-[#fff] tw-border-2 tw-border-primary"
+                                    onclick="updateSearchTerm('SaaS')"
+                                    >
+                        SaaS
+                    </button>
+                    <button class="tw-text-base tw-rounded-full tw-p-[2px] tw-px-2 
+                                    tw-text-primary tw-bg-[#fff] tw-border-2 tw-border-primary"
+                                    onclick="updateSearchTerm('apps')"
+                                    >
+                        Apps
+                    </button>
+                    <button class="tw-text-base tw-rounded-full tw-p-[2px] tw-px-2 
+                                    tw-text-primary tw-bg-[#fff] tw-border-2 tw-border-primary"
+                                    onclick="updateSearchTerm('law')"
+                                    >
+                        Law
+                    </button>
+                    <button class="tw-text-base tw-rounded-full tw-p-[2px] tw-px-2 
+                                    tw-text-primary tw-bg-[#fff] tw-border-2 tw-border-primary"
+                                    onclick="updateSearchTerm('portfolio')"
+                                    >
+                        Portfolio
+                    </button>
+                    <button class="tw-text-base tw-rounded-full tw-p-[2px] tw-px-2 
+                                    tw-text-primary tw-bg-[#fff] tw-border-2 tw-border-primary"
+                                    onclick="updateSearchTerm('restaurant')"
+                                    >
+                        Restaurant
+                    </button>
+                    <button class="tw-text-base tw-rounded-full tw-p-[2px] tw-px-2 
+                                    tw-text-primary tw-bg-[#fff] tw-border-2 tw-border-primary"
+                                    onclick="updateSearchTerm('real estate')"
+                                    >
+                        real estate
+                    </button>
+                    <button class="tw-text-base tw-rounded-full tw-p-[2px] tw-px-2 
+                                    tw-text-primary tw-bg-[#fff] tw-border-2 tw-border-primary"
+                                    onclick="updateSearchTerm('others')"
+                                    >
+                        others
+                    </button>
                 </div>
 
             </div>
@@ -180,15 +227,13 @@
     <section class="tw-w-full  tw-max-w-[100vw]
                     tw-flex tw-flex-col tw-overflow-hidden tw-relative 
                     tw-place-items-center
-                    tw-place-content-center
                     tw-min-h-[60vh]
                     tw-p-6
                     "
-                    id="template-data"
                     >
 
         <div class="tw-flex tw-flex-wrap tw-gap-8 tw-w-full tw-h-full 
-                    tw-place-content-center">
+                    tw-place-content-center" id="template-data-container">
 
             <div class="template-card" onclick="showPreviewModal(1)">
 
@@ -215,15 +260,15 @@
                 </div>
             </div>
 
-            <div class="template-card">
+            <div class="template-card" onclick="showPreviewModal(2)">
 
-                <button type="button" class="template-preview" onclick="showPreviewModal(2)">
-                    <img src="./assets/template-preview/saas/celestialsaas.png" 
+                <div  class="template-preview">
+                    <img src="./assets/template-preview/apps/chat-origin.png" 
                         alt="" class="tw-w-full tw-h-full tw-object-contain" 
                         srcset="">
-                </button>
-                <div class="template-footer">
-                    <h2 class="tw-text-xl tw-font-medium">Chat Origin - App </h2>
+                </div>
+                <div class="template-footer tw-w-full" >
+                    <h2 class="tw-text-xl tw-font-medium">SaaS template</h2>
 
                     <div class="tw-flex tw-mt-5 tw-justify-between">
                         <a href="https://github.com/PaulleDemon/landing-pages/tree/main/src/apps/chatorigin" target="_blank" rel="noopener noreferrer" class="tw-text-2xl">
@@ -239,11 +284,16 @@
                     </div>
                 </div>
             </div>
-
             
 
+            <div>Loading please wait...</div>
+
         </div>
-        
+        <div class="tw-text-xl tw-mt-4 tw-hidden" id="search-404">
+            <span>oops! can't find that template, 
+                <a href="https://github.com/PaulleDemon/landing-pages/issues/new/choose" class="tw-underline tw-underline-offset-2 hover:tw-text-primary">request a new one</a> or 
+                    search another term</span>
+        </div>
     </section>
   
     <!-- the preview modal -->
@@ -293,14 +343,50 @@
         </div>
     </div>
 
-
     <section class="tw-mt-5 tw-w-full tw-flex tw-flex-col tw-p-[2%]
+                     tw-place-items-center" id="faq">
+
+        
+        <div class="tw-flex tw-flex-col tw-w-full tw-min-h-[300px] tw-max-w-[650px] tw-p-4 tw-gap-4  tw-mt-5">
+            <div class="tw-flex tw-flex-col tw-gap-1">
+                <h3 class="tw-text-3xl max-md:tw-text-xl tw-text-primary tw-font-medium">
+                    What are landing page templates?
+                </h3>
+                <p class="tw-text-base max-md:tw-text-sm tw-text-justify">
+                    Landing page templates are pre-designed web page layouts specifically created to serve as a starting point for building effective landing pages. These templates are designed to convert visitors into leads or customers by focusing on a specific goal, such as capturing email addresses, promoting a product, or encouraging a sign-up
+                </p>
+            </div>
+            <div class="tw-flex tw-flex-col tw-gap-1">
+                <h3 class="tw-text-3xl max-md:tw-text-xl tw-text-primary tw-font-medium">
+                    Whom is this landing page ideal for?
+                </h3>
+                <p class="tw-text-base max-md:tw-text-sm tw-text-justify">
+                    These templates are ideal for freelancers, SaaS developer, App developers and people 
+                    who want a starting point and inspiration.
+                </p>
+            </div>
+            <div class="tw-flex tw-flex-col tw-gap-1">
+                <h3 class="tw-text-3xl max-md:tw-text-xl tw-text-primary tw-font-medium">
+                    Why use a website template?
+                </h3>
+                <p class="tw-text-base max-md:tw-text-sm tw-text-justify">
+                    Most clients and customers don't care about what tool you use or 
+                    whether start from scratch or use a template. Using website templates will save you 
+                    hours of work, so you can start looking for clients or dedicate your time elsewhere.
+                </p>
+            </div>
+        </div>
+    
+
+    </section>
+
+    <section class="tw-w-full tw-flex tw-flex-col tw-p-5
                      tw-place-items-center" id="faq">
 
         <h3 class="tw-text-3xl max-md:tw-text-2xl tw-text-primary tw-font-medium">
            Faq
         </h3>
-        <div class="tw-flex tw-flex-col tw-w-full tw-min-h-[450px] tw-max-w-[850px] tw-gap-2  tw-mt-5">
+        <div class="tw-flex tw-flex-col tw-w-full tw-min-h-[300px] tw-max-w-[850px] tw-gap-2  tw-mt-5">
             <div class="tw-w-full">
                 <div class="collapsible tw-flex tw-select-none tw-w-full tw-text-2xl">
                     <span>Under what license are the source code?</span>
@@ -308,6 +394,16 @@
                 </div>
                 <div class="content" style="height: 0px;">
                     All the templates are under MIT license
+                </div> 
+            </div>
+
+            <div class="tw-w-full">
+                <div class="collapsible tw-flex tw-select-none tw-w-full tw-text-2xl">
+                    <span>What is the tech stack?</span>
+                    <i class="bi bi-plus tw-font-semibold tw-ml-auto"></i>
+                </div>
+                <div class="content" style="height: 0px;">
+                    Plaing HTML, CSS and JS along with tailwind css for rapid development 
                 </div> 
             </div>
 
@@ -350,9 +446,10 @@
                     tw-p-3
                     tw-text-black
                     tw-mt-auto
+                    max-md:tw-place-items-center
                     ">
 
-        <div class="tw-h-full tw-w-[250px] tw-flex tw-gap-4">
+        <div class="tw-h-full tw-w-[250px] tw-flex tw-gap-4 tw-place-content-center">
             <a href="http://github.com/PaulleDemon" class="tw-text-2xl">
                 <i class="bi bi-github"></i>
             </a>
@@ -366,7 +463,7 @@
             </a>
         </div>
 
-        <div class="tw-w-full tw-flex tw-place-content-end">
+        <div class="tw-w-full tw-flex max-md:tw-place-content-center lg:tw-place-content-end">
             <span>Made with ❤️ by 
                 <a href="http://github.com/PaulleDemon" class="tw-underline tw-underline-offset-2">Paul</a>
 

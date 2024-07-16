@@ -10,17 +10,65 @@
     {
         "id": 2,
         "name": "Finance SaaS",
-        "githubUrl": "https://github.com/PaulleDemon/landing-pages/tree/main/src/saas/finance",
         "previewUrl": "https://finance-saas-template.netlify.app/",
+        "githubUrl": "https://github.com/PaulleDemon/landing-pages/tree/main/src/saas/finance",
         "previewImg": "https://github.com/PaulleDemon/landing-pages/blob/main/src/saas/screenshots/finance.png", 
         "tags": ["saas", "finance"]
     },
     {
         "id": 3,
         "name": "Celestial SaaS",
-        "githubUrl": "https://github.com/PaulleDemon/landing-pages/tree/main/src/saas/finance",
-        "previewUrl": "https://finance-saas-template.netlify.app/",
-        "previewImg": "https://github.com/PaulleDemon/landing-pages/blob/main/src/saas/screenshots/finance.png", 
-        "tags": ["saas", "finance"]
+        "previewUrl": "https://celestialsaas.netlify.app/",
+        "githubUrl": "https://github.com/PaulleDemon/landing-pages/blob/main/src/saas/CelestialSaaS",
+        "previewImg": "https://github.com/PaulleDemon/landing-pages/raw/main/src/saas/screenshots/celestialsaas.png", 
+        "tags": ["saas", "dashboard", "light theme"]
+    },
+    {
+        "id": 4,
+        "name": "Bistro restaurant",
+        "previewUrl": "https://bistro-rest.netlify.app/",
+        "githubUrl": "https://github.com/PaulleDemon/landing-pages/blob/main/src/restaurant/bistro",
+        "previewImg": "https://github.com/PaulleDemon/landing-pages/raw/main/src/restaurant/screenshots/bistro.png", 
+        "tags": ["restaurant", "hotel"]
+    },
+    {
+        "id": 5,
+        "name": "Law group",
+        "previewUrl": "https://lawgroup.netlify.app/",
+        "githubUrl": "https://github.com/PaulleDemon/landing-pages/blob/main/src/law/lawgroup",
+        "previewImg": "https://github.com/PaulleDemon/landing-pages/raw/main/src/law/screenshots/lawgroup.png", 
+        "tags": ["saas", "dashboard", "light theme"]
+    },
+    {
+        "id": 6,
+        "name": "Brick property",
+        "previewUrl": "https://supremecarwash.netlify.app/",
+        "githubUrl": "https://github.com/PaulleDemon/landing-pages/blob/main/src/others/carwash",
+        "previewImg": "https://github.com/PaulleDemon/landing-pages/raw/main/src/realestate/screenshots/brickstone.png", 
+        "tags": ["real estate", "estate", "apartments"]
+    },
+    {
+        "id": 7,
+        "name": "JrDev portfolio",
+        "previewUrl": "https://jrdev-port.netlify.app/",
+        "githubUrl": "https://github.com/PaulleDemon/landing-pages/blob/main/src/portfolio/jrdev",
+        "previewImg": "https://github.com/PaulleDemon/landing-pages/raw/main/src/portfolio/screenshots/dev.png", 
+        "tags": ["portfolio", "developer", "dark"]
+    },
+    {
+        "id": 8,
+        "name": "Bella Youtuber",
+        "previewUrl": "https://bella-youtuber.netlify.app/",
+        "githubUrl": "https://github.com/PaulleDemon/landing-pages/blob/main/src/portfolio/bella",
+        "previewImg": "https://github.com/PaulleDemon/landing-pages/raw/main/src/portfolio/screenshots/bella.png", 
+        "tags": ["portfolio", "youtuber", "content creator", "creator"]
+    },
+    {
+        "id": 9,
+        "name": "Car wash",
+        "previewUrl": "https://bella-youtuber.netlify.app/",
+        "githubUrl": "https://github.com/PaulleDemon/landing-pages/blob/main/src/portfolio/bella",
+        "previewImg": "https://github.com/PaulleDemon/landing-pages/raw/main/src/others/screenshots/carwash.png", 
+        "tags": ["car", "others", "car wash", "wash"]
     }
 ]
