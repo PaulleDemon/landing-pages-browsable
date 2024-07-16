@@ -146,7 +146,7 @@ function showPreviewModal(previewId){
     modal.querySelector("#modal-source-code").setAttribute("href", data.githubUrl)
     modal.querySelector("#preview-url").setAttribute("href", data.previewUrl)
     modal.querySelector("#download-folder").onclick = () => {
-        showAlert("downloading please wait...")
+        showAlert("creating a zip please wait few seconds...", 5000)
         downloadFolder(data.githubUrl)
     }
 
