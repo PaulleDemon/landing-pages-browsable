@@ -850,6 +850,10 @@ video {
   gap: 20px;
 }
 
+.tw-gap-12 {
+  gap: 3rem;
+}
+
 .tw-overflow-hidden {
   overflow: hidden;
 }
