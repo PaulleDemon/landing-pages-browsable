@@ -131,15 +131,15 @@ function hidePreviewModal(){
 }
 
 /**
- * Gets value from DB by id
+ * Gets value from DB by primary key
  */
-function getObjectById(id) {
-    return dbCache.find(item => item.id === id);
+function getObjectByKey(searchValue, primaryKey) {
+    return dbCache.find(item => item[primaryKey] === searchValue)
 }
 
-function showPreviewModal(previewId){
+function showPreviewModal(githubUrl){
 
-    const data = getObjectById(previewId)
+    const data = getObjectByKey(githubUrl, "githubUrl")
 
     modal.querySelector("#preview-img").setAttribute("src", data.previewImg)
     modal.querySelector("#template-name").textContent = data.name
@@ -147,7 +147,14 @@ function showPreviewModal(previewId){
     modal.querySelector("#preview-url").setAttribute("href", data.previewUrl)
     modal.querySelector("#download-folder").onclick = () => {
         showAlert("creating a zip please wait few seconds...", 5000)
-        downloadFolder(data.githubUrl)
+        
+        try {
+            downloadFolder(data.githubUrl)
+            
+        } catch (error) {
+            showAlert("download failed, check dev console for more.")
+        }
+    
     }
 
     modal.classList.remove("tw-scale-0", "tw-hidden")
@@ -166,7 +173,7 @@ function loadTemplates(data){
 
     data.forEach((x) => {
         let template = `
-                <div class="template-card" onclick="showPreviewModal(${x.id})">
+                <div class="template-card" onclick="showPreviewModal('${x.githubUrl}')">
 
                     <div  class="template-preview">
                         <img src="${x.previewImg}" 
@@ -174,8 +181,15 @@ function loadTemplates(data){
                             >
                     </div>
                     <div class="template-footer tw-w-full" >
-                        <h2 class="tw-text-xl tw-font-medium">${x.name}</h2>
 
+                        <div class="tw-flex tw-w-full">
+                            <h2 class="tw-text-xl tw-font-medium">${x.name}</h2>
+                            <p class="tw-text-sm tw-ml-auto tw-p-1 tw-px-2 tw-border-primary 
+                                        tw-text-primary
+                                        tw-rounded-full tw-border-[1px]">
+                                ${x.category}
+                            </p>
+                        </div>
                         <div class="tw-flex tw-mt-5 tw-justify-between">
                             <a href="${x.githubUrl}" target="_blank" rel="noopener noreferrer" class="tw-text-2xl">
                                 <i class="bi bi-github"></i>

@@ -22,6 +22,7 @@ const downloadFolder = async (repoUrl) => {
                 await fetchFolderContents(item.url, zipFolder, `${basePath}${item.name}/`)
             }
         }
+        
         for (const file of files) {
             zipFolder.file(file.fileName, file.fileData)
         }
@@ -30,6 +31,12 @@ const downloadFolder = async (repoUrl) => {
     const zip = new JSZip()
 
     await fetchFolderContents(apiUrl, zip)
+
+    // add package.json to every folder
+    const packageFile = await fetch("https://raw.githubusercontent.com/PaulleDemon/landing-pages/main/.package.json")
+    const packageFileData = await packageFile.blob()
+    zip.file('package.json', packageFileData)
+    
 
     const content = await zip.generateAsync({ type: 'blob' })
     const blobUrl = URL.createObjectURL(content)
