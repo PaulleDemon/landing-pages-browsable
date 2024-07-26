@@ -4,8 +4,8 @@
         "name": "SaaS AI",
         "category": "saas",
         "previewUrl": "https://ai-code.netlify.app/",
-        "githubUrl": "https://github.com/PaulleDemon/landing-pages/blob/main/src/saas/SaaS-AI",
-        "previewImg": "https://github.com/PaulleDemon/landing-pages/raw/main/src/saas/screenshots/ai-saas.png", 
+        "githubUrl": "https://github.com/PaulleDemon/awesome-landing-pages/blob/main/src/saas/SaaS-AI",
+        "previewImg": "https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/saas/screenshots/ai-saas.png", 
         "tags": ["saas", "landing pages", "dark", "responsive", "dark theme", "animated"]
     },
   
@@ -13,8 +13,8 @@
         "name": "Chat origin",
         "category": "apps",
         "previewUrl": "https://chatorigin.netlify.app/",
-        "githubUrl": "https://github.com/PaulleDemon/landing-pages/tree/main/src/apps/chatorigin",
-        "previewImg": "https://github.com/PaulleDemon/landing-pages/raw/main/src/apps/screenshots/chat-origin.png", 
+        "githubUrl": "https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/apps/chatorigin",
+        "previewImg": "https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/apps/screenshots/chat-origin.png", 
         "tags": ["apps", "landing pages", "chat", "apple", "google"]
     },
 
@@ -22,8 +22,8 @@
         "name": "Jamie developer",
         "category": "portfolio",
         "previewUrl": "https://jamie-dev-portfolio.netlify.app/",
-        "githubUrl": "https://github.com/PaulleDemon/landing-pages/tree/main/src/portfolio/Jamie-portfolio",
-        "previewImg": "https://github.com/PaulleDemon/landing-pages/raw/main/src/portfolio/screenshots/jamie-dev-portfolio.png", 
+        "githubUrl": "https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/portfolio/Jamie-portfolio",
+        "previewImg": "https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/portfolio/screenshots/jamie-dev-portfolio.png", 
         "tags": ["portfolio", "landing pages", "developer", "responsive", "animated"]
     },
 
@@ -31,80 +31,80 @@
         "name": "Finance SaaS",
         "category": "saas",
         "previewUrl": "https://finance-saas-template.netlify.app/",
-        "githubUrl": "https://github.com/PaulleDemon/landing-pages/tree/main/src/saas/finance",
-        "previewImg": "https://github.com/PaulleDemon/landing-pages/raw/main/src/saas/screenshots/finance.png", 
+        "githubUrl": "https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/saas/finance",
+        "previewImg": "https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/saas/screenshots/finance.png", 
         "tags": ["saas", "finance"]
     },
     {
         "name": "Celestial SaaS",
         "category": "saas",
         "previewUrl": "https://celestialsaas.netlify.app/",
-        "githubUrl": "https://github.com/PaulleDemon/landing-pages/blob/main/src/saas/CelestialSaaS",
-        "previewImg": "https://github.com/PaulleDemon/landing-pages/raw/main/src/saas/screenshots/celestialsaas.png", 
+        "githubUrl": "https://github.com/PaulleDemon/awesome-landing-pages/blob/main/src/saas/CelestialSaaS",
+        "previewImg": "https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/saas/screenshots/celestialsaas.png", 
         "tags": ["saas", "dashboard", "light theme"]
     },
     {
         "name": "AI Sales app",
         "category": "apps",
         "previewUrl": "https://aisales-app.netlify.app/",
-        "githubUrl": "https://github.com/PaulleDemon/landing-pages/tree/main/src/apps/AISales",
-        "previewImg": "https://github.com/PaulleDemon/landing-pages/raw/main/src/apps/screenshots/aisales.png", 
+        "githubUrl": "https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/apps/AISales",
+        "previewImg": "https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/apps/screenshots/aisales.png", 
         "tags": ["apps", "dashboard", "light theme", "animated"]
     },
     {
         "name": "Bistro restaurant",
         "category": "restaurant",
         "previewUrl": "https://bistro-rest.netlify.app/",
-        "githubUrl": "https://github.com/PaulleDemon/landing-pages/blob/main/src/restaurant/bistro",
-        "previewImg": "https://github.com/PaulleDemon/landing-pages/raw/main/src/restaurant/screenshots/bistro.png", 
+        "githubUrl": "https://github.com/PaulleDemon/awesome-landing-pages/blob/main/src/restaurant/bistro",
+        "previewImg": "https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/restaurant/screenshots/bistro.png", 
         "tags": ["restaurant", "hotel"]
     },
     {
         "name": "Law Fire",
         "category": "law",
         "previewUrl": "https://law-fire.netlify.app/",
-        "githubUrl": "https://github.com/PaulleDemon/landing-pages/tree/main/src/law/lawfire",
-        "previewImg": "https://github.com/PaulleDemon/landing-pages/raw/main/src/law/screenshots/law-fire.png", 
+        "githubUrl": "https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/law/lawfire",
+        "previewImg": "https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/law/screenshots/law-fire.png", 
         "tags": ["law", "attorney", "lawyer"]
     },
     {
         "name": "Law group",
         "category": "law",
         "previewUrl": "https://lawgroup.netlify.app/",
-        "githubUrl": "https://github.com/PaulleDemon/landing-pages/blob/main/src/law/lawgroup",
-        "previewImg": "https://github.com/PaulleDemon/landing-pages/raw/main/src/law/screenshots/lawgroup.png", 
+        "githubUrl": "https://github.com/PaulleDemon/awesome-landing-pages/blob/main/src/law/lawgroup",
+        "previewImg": "https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/law/screenshots/lawgroup.png", 
         "tags": ["law", "attorney", "lawyer"]
     },
     {
         "name": "Brick property",
         "category": "real-estate",
         "previewUrl": "https://brickproperty.netlify.app/",
-        "githubUrl": "https://github.com/PaulleDemon/landing-pages/tree/main/src/realestate/brickproperty",
-        "previewImg": "https://github.com/PaulleDemon/landing-pages/raw/main/src/realestate/screenshots/brickstone.png", 
+        "githubUrl": "https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/realestate/brickproperty",
+        "previewImg": "https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/realestate/screenshots/brickstone.png", 
         "tags": ["real estate", "estate", "apartments"]
     },
     {
         "name": "JrDev portfolio",
         "category": "portfolio",
         "previewUrl": "https://jrdev-port.netlify.app/",
-        "githubUrl": "https://github.com/PaulleDemon/landing-pages/blob/main/src/portfolio/jrdev",
-        "previewImg": "https://github.com/PaulleDemon/landing-pages/raw/main/src/portfolio/screenshots/dev.png", 
+        "githubUrl": "https://github.com/PaulleDemon/awesome-landing-pages/blob/main/src/portfolio/jrdev",
+        "previewImg": "https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/portfolio/screenshots/dev.png", 
         "tags": ["portfolio", "developer", "dark"]
     },
     {
         "name": "Bella Youtuber",
         "category": "portfolio",
         "previewUrl": "https://bella-youtuber.netlify.app/",
-        "githubUrl": "https://github.com/PaulleDemon/landing-pages/blob/main/src/portfolio/bella",
-        "previewImg": "https://github.com/PaulleDemon/landing-pages/raw/main/src/portfolio/screenshots/bella.png", 
+        "githubUrl": "https://github.com/PaulleDemon/awesome-landing-pages/blob/main/src/portfolio/bella",
+        "previewImg": "https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/portfolio/screenshots/bella.png", 
         "tags": ["portfolio", "youtuber", "content creator", "creator"]
     },
     {
         "name": "Car wash",
         "category": "others",
         "previewUrl": "https://bella-youtuber.netlify.app/",
-        "githubUrl": "https://github.com/PaulleDemon/landing-pages/blob/main/src/portfolio/bella",
-        "previewImg": "https://github.com/PaulleDemon/landing-pages/raw/main/src/others/screenshots/carwash.png", 
+        "githubUrl": "https://github.com/PaulleDemon/awesome-landing-pages/blob/main/src/portfolio/bella",
+        "previewImg": "https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/others/screenshots/carwash.png", 
         "tags": ["car", "others", "car wash", "wash"]
     }
 ]
