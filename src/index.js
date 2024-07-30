@@ -7,6 +7,8 @@ let isHeaderCollapsed = window.innerWidth < RESPONSIVE_WIDTH
 const collapseBtn = document.getElementById("collapse-btn")
 const collapseHeaderItems = document.getElementById("collapsed-header-items")
 
+const urlParams = new URLSearchParams(window.location.search)
+
 const toastAlert = document.querySelector("#toast-alert")
 let toastAlertTimeout = null
 
@@ -31,7 +33,17 @@ async function fetchDB(){
 fetchDB().then((data) => {
     dbCache = data
     loadTemplates(data)
+
+    const searchParam = urlParams.get('search')
+
+    if (searchParam?.length > 0){
+        const search = document.querySelector("#search-input")
+        search.value = searchParam
+        onSearch()
+    }
+
 })
+
 
 function onHeaderClickOutside(e) {
 
@@ -236,5 +248,45 @@ function onSearch(){
 function updateSearchTerm(searchTerm){
     const search = document.querySelector("#search-input")
     search.value = searchTerm
+
+    const url = new URL(location.href)
+    url.searchParams.set("search", searchTerm)
+    history.pushState(null, '', url)
     onSearch()
+}
+
+const templateModalContainer = document.querySelector("#template-modal-container")
+const templateRequestModal = document.querySelector("#template-request-modal")
+
+function checkClickInsideModal(event){
+    if (!templateRequestModal.contains(event.target)){
+        event.preventDefault()
+        closeTemplateRequestModal()
+    }
+}
+
+function openTemplateRequestModal(){
+
+    // templateModalContainer.classList.remove("tw-hidden")
+    templateModalContainer.classList.remove("tw-scale-0")
+    templateModalContainer.classList.add("tw-scale-1")
+
+    setTimeout(() => 
+        window.addEventListener("click", checkClickInsideModal),
+        100
+    )
+
+    document.body.classList.add("modal-open")
+
+}
+
+function closeTemplateRequestModal(){
+
+    templateModalContainer.classList.add("tw-scale-0")
+    templateModalContainer.classList.remove("tw-scale-1")
+
+    window.removeEventListener("click", checkClickInsideModal)
+
+    document.body.classList.remove("modal-open")
+
 }

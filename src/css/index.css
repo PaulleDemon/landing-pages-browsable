@@ -32,6 +32,11 @@ header > .collapsible-header{
     transition: width 0.3s ease;
 }
 
+/* remove scroll when modal-open */
+body.modal-open {
+    overflow: hidden;
+}
+
 .animated-collapse{
     transition: width 0.3s ease;
 }

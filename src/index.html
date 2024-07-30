@@ -16,11 +16,13 @@
     <meta property="og:image" content="" />
   
 
-    <!-- <link rel="stylesheet" href="css/tailwind-runtime.css"> -->
-    <link rel="stylesheet" href="./css/tailwind-build.css">
+    <link rel="stylesheet" href="css/tailwind-runtime.css">
+    <!-- <link rel="stylesheet" href="./css/tailwind-build.css"> -->
     <link rel="stylesheet" href="css/index.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script async src="https://tally.so/widgets/embed.js"></script>
 
 </head>
 <body class="tw-min-h-[100vh] tw-bg-[#fff] tw-flex tw-flex-col">
@@ -74,9 +76,9 @@
                 <a class="header-links" href="https://github.com/PaulleDemon/landing-pages?tab=readme-ov-file#installation-and-setup">
                     Docs
                 </a>
-                <a class="header-links" href="https://github.com/PaulleDemon/landing-pages/issues/new/choose">
+                <button class="header-links" onclick="openTemplateRequestModal()">
                     Template request
-                </a>
+                </button>
             </div>
             <div class="tw-flex tw-gap-[20px] tw-place-items-center tw-text-base
                          max-md:tw-place-content-end
@@ -176,7 +178,7 @@
                     </button>  
                   
                 </div>
-                <div class="tw-mt-4 tw-flex tw-whitespace-nowrap tw-gap-2 tw-max-w-[650px] lg:tw-flex-wrap max-md:tw-max-w-[100vw] 
+                <div class="tw-mt-4 tw-flex tw-whitespace-nowrap tw-gap-2 tw-max-w-[700px] lg:tw-flex-wrap max-md:tw-max-w-[100vw] 
                             tw-overflow-x-auto tw-p-1">
                     <button class="tw-text-base tw-rounded-full tw-p-[2px] tw-px-2 
                                     tw-text-primary tw-bg-[#fff] tw-border-2 
@@ -241,9 +243,20 @@
                                     hover:tw-bg-primary
                                     hover:tw-text-white
                                     "
+                                    onclick="updateSearchTerm('ngo')"
+                                    >
+                        Non-profits
+                    </button>
+                    <button class="tw-text-base tw-rounded-full tw-p-[2px] tw-px-2 
+                                    tw-text-primary tw-bg-[#fff] tw-border-2 tw-border-primary
+                                    tw-duration-[0.3s]
+                                    tw-transition-colors
+                                    hover:tw-bg-primary
+                                    hover:tw-text-white
+                                    "
                                     onclick="updateSearchTerm('real estate')"
                                     >
-                        real estate
+                        Real estate
                     </button>
                     <button class="tw-text-base tw-rounded-full tw-p-[2px] tw-px-2 
                                     tw-text-primary tw-bg-[#fff] tw-border-2 tw-border-primary
@@ -254,7 +267,7 @@
                                     "
                                     onclick="updateSearchTerm('others')"
                                     >
-                        others
+                        Others
                     </button>
                 </div>
 
@@ -485,7 +498,36 @@
     
 
     </section>
- 
+
+    <div class="tw-fixed tw-scale-0 tw-flex tw-bg-[#0c0c0c94] tw-duration-[0.3s] tw-transition-transform tw-place-content-center tw-place-items-center tw-top-0 tw-w-full tw-h-full tw-z-50" id="template-modal-container">
+        <div class="tw-max-w-[650px] tw-m-2 tw-min-h-[200px] tw-h-fit tw-gap-5 tw-bg-gray-100 tw-rounded-lg tw-shadow-xl tw-p-6"
+                    id="template-request-modal">
+            
+            <div class="tw-relative tw-text-xl tw-flex tw-place-content-end">
+                <button title="close" onclick="closeTemplateRequestModal()">
+                    <i class="bi bi-x-circle-fill"></i>
+                </button>
+            </div>
+
+            <div class="tw-text-2xl max-md:tw-text-xl tw-text-center">
+                Would you like to make a generic request or a custom request?
+            </div>
+
+            <div class="tw-flex tw-justify-between tw-gap-2 tw-text-lg max-md:tw-text-sm">
+
+                <a href="https://github.com/PaulleDemon/awesome-landing-pages/issues/new/choose" rel="noreferrer noopener" class="btn !tw-bg-transparent !tw-text-primary !tw-border-primary !tw-border-solid !tw-border-[1px]">
+                    Generic request
+                </a>
+
+                <button data-tally-open="woO0Kx" data-tally-layout="modal" data-tally-width="400" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" data-tally-auto-close="2000" class="btn">
+                    Custom request
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+
     <footer class="tw-flex max-md:tw-flex-col tw-w-full
                     tw-px-[5%] tw-gap-3 
                     tw-p-3
@@ -526,6 +568,7 @@
 
 
 <script src="./scripts/download-folder.js"></script>
+<script src="./scripts/utils.js"></script>
 <script src="./index.js"></script>
 
 </html>

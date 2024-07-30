@@ -1,6 +1,15 @@
 [
     
     {
+        "name": "SaaSy Dark",
+        "category": "saas",
+        "previewUrl": "https://saasy-dark.netlify.app/",
+        "githubUrl": "https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/saas/SaaSyDark",
+        "previewImg": "https://raw.githubusercontent.com/PaulleDemon/awesome-landing-pages/main/src/saas/screenshots/saasydark.png", 
+        "tags": ["saas", "landing pages", "dark", "responsive", "dark theme", "animated"]
+    },
+
+    {
         "name": "SaaS AI",
         "category": "saas",
         "previewUrl": "https://ai-code.netlify.app/",
@@ -58,6 +67,14 @@
         "githubUrl": "https://github.com/PaulleDemon/awesome-landing-pages/blob/main/src/restaurant/bistro",
         "previewImg": "https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/restaurant/screenshots/bistro.png", 
         "tags": ["restaurant", "hotel"]
+    },
+    {
+        "name": "Project africa",
+        "category": "ngo",
+        "previewUrl": "https://law-fire.netlify.app/",
+        "githubUrl": "https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/ngo/project-africa",
+        "previewImg": "https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/ngo/screenshots/project-africa.png", 
+        "tags": ["ngo", "non-profit", "charity", "donation"]
     },
     {
         "name": "Law Fire",
