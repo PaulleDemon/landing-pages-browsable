@@ -1,6 +1,24 @@
 [
     
     {
+        "name": "Navigator",
+        "category": "apps",
+        "previewUrl": "https://navigator-app.netlify.app/",
+        "githubUrl": "https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/apps/navigator",
+        "previewImg": "https://raw.githubusercontent.com/PaulleDemon/awesome-landing-pages/main/src/apps/screenshots/navigator.png", 
+        "tags": ["apps", "landing pages", "dark", "responsive", "navigation", "animated"]
+    },
+
+    {
+        "name": "Traveler",
+        "category": "apps",
+        "previewUrl": "https://traveler-dyno.netlify.app/",
+        "githubUrl": "https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/apps/traveler",
+        "previewImg": "https://raw.githubusercontent.com/PaulleDemon/awesome-landing-pages/main/src/apps/screenshots/traveler.png", 
+        "tags": ["apps", "landing pages", "light", "responsive", "travel", "animated"]
+    },
+    
+    {
         "name": "SaaSy Dark",
         "category": "saas",
         "previewUrl": "https://saasy-dark.netlify.app/",
