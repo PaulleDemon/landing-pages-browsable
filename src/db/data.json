@@ -135,6 +135,14 @@
         "tags": ["portfolio", "youtuber", "content creator", "creator"]
     },
     {
+        "name": "Notion themed portfolio",
+        "category": "portfolio",
+        "previewUrl": "https://notion-portfolio.netlify.app/",
+        "githubUrl": "https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/portfolio/notion",
+        "previewImg": "https://raw.githubusercontent.com/PaulleDemon/awesome-landing-pages/main/src/portfolio/screenshots/notion.png", 
+        "tags": ["portfolio", "landing pages", "developer", "responsive", "notion"]
+    },
+    {
         "name": "Car wash",
         "category": "others",
         "previewUrl": "https://supremecarwash.netlify.app/",
