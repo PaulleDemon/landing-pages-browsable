@@ -87,6 +87,14 @@
         "tags": ["restaurant", "hotel"]
     },
     {
+        "name": "Nutrio restaurant",
+        "category": "restaurant",
+        "previewUrl": "https://nutrio-rest.netlify.app/",
+        "githubUrl": "https://github.com/PaulleDemon/awesome-landing-pages/blob/main/src/restaurant/nutrio",
+        "previewImg": "https://github.com/PaulleDemon/awesome-landing-pages/raw/main/src/restaurant/screenshots/nutrio.png", 
+        "tags": ["restaurant", "hotel"]
+    },
+    {
         "name": "Project africa",
         "category": "ngo",
         "previewUrl": "https://project-africa.netlify.app/",
