@@ -1,5 +1,13 @@
 [
-    
+    {
+        "name": "Pixa Ai",
+        "category": "saas",
+        "previewUrl": "https://pixapage.netlify.app/",
+        "githubUrl": "https://github.com/PaulleDemon/awesome-landing-pages/tree/main/src/saas/pixaai",
+        "previewImg": "https://raw.githubusercontent.com/PaulleDemon/awesome-landing-pages/refs/heads/main/src/saas/screenshots/pixa-dark.png", 
+        "tags": ["saas", "landing pages", "dark", "responsive", "light", "ai"]
+    },
+
     {
         "name": "Navigator",
         "category": "apps",
